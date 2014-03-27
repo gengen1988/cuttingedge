@@ -16,7 +16,7 @@
     "url": "https://github.com/gengen1988/cuttingedge/issues"
   },
   "homepage": "https://github.com/gengen1988/cuttingedge",
-  "dependencies": {
+  "devDependencies": {
     "grunt": "^0.4.4"
   }
 }
