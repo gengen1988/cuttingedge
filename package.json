@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/gengen1988/cuttingedge",
   "devDependencies": {
-    "grunt": "^0.4.4"
+    "grunt": "^0.4.4",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0"
   }
 }
