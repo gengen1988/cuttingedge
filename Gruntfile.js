@@ -41,8 +41,19 @@ module.exports = function (grunt) {
   
   grunt.registerTask('update', function () {
     var done = this.async();
-    grunt.log.write('update android project');
+    grunt.log.write('update android project...');
     exec('android update project -p cordova/platforms/android', function (err, stdout, stderr) {
+      grunt.log.ok();
+      done();
+    });
+  });
+
+  grunt.registerTask('run', function () {
+    var done = this.async();
+    grunt.log.write('run without build...');
+    exec('cordova run --nobuild', {
+      cwd: 'cordova'
+    }, function (err, stdout, stderr) {
       grunt.log.ok();
       done();
     });
@@ -55,5 +66,7 @@ module.exports = function (grunt) {
     'update',
     'compile'
   ]);
+
+  grunt.regiserTask('test', ['build', 'run']);
   
 }
