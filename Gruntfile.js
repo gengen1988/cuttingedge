@@ -80,6 +80,22 @@ module.exports = function (grunt) {
       }
     }, errorHandler.bind(done));
   });
+
+  grunt.registerTask('debug', function () {
+    var done = this.async();
+    grunt.log.writeln('running ddms...');
+    grunt.util.spawn({
+      cmd: 'monitor',
+      opts: {
+        stdio: 'inherit'
+      }
+    }, errorHandler.bind(done));
+  });
+
+  grunt.registerTask('web', function () {
+    var done = this.async();
+    grunt.log.writeln('running web server');
+  });
   
   grunt.registerTask('build', [
     'clean',
@@ -89,6 +105,6 @@ module.exports = function (grunt) {
     'compile'
   ]);
 
-  grunt.registerTask('test', ['build', 'run']);
+  grunt.registerTask('test', ['build', 'run', 'debug']);
 
 }

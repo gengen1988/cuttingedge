@@ -40,9 +40,7 @@ Ext.application({
     },
 
     launch: function() {
-        // Destroy the #appLoadingIndicator element
-        Ext.fly('appLoadingIndicator').destroy();
-
+        console.log('=== hide splashscreen ===');
         navigator.splashscreen.hide();
 
         // Initialize the main view

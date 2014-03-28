@@ -39,10 +39,10 @@
      *      }
      */
     "js": [
-	{
-	    "path": "cordova.js",
-	    "remote": true
-	},
+        {
+            "path": "cordova.js",
+            "remote": true
+        },
         {
             "path": "../touch/sencha-touch.js",
             "x-bootstrap": true
@@ -116,7 +116,7 @@
      * File / directory name matchers to ignore when copying to the builds, must be valid regular expressions
      */
     "ignore": [
-        "\.svn$"
+        "\\.svn$"
     ],
 
     /**
