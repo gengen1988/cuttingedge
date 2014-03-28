@@ -4,12 +4,14 @@
 /home/gg/workspace/cuttingedge/cordova/platforms/android/res/values/strings.xml \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/res/drawable-mdpi/icon.png \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/res/drawable/icon.png \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/res/drawable/splash.png \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/res/xml/config.xml \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/res/drawable-hdpi/icon.png \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/res/drawable-ldpi/icon.png \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/res/drawable-xhdpi/icon.png \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/res/drawable-mdpi/icon.png \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/res/drawable/icon.png \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/res/drawable/splash.png \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/res/drawable-hdpi/icon.png \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/assets/_where-is-www.txt \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www \
@@ -18,7 +20,11 @@
 /home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/cordova.js \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/app.js \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/app.json \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/plugins \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/resources \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www/splashscreen.js \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/resources/startup \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/resources/icons \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/assets/www/resources/css \

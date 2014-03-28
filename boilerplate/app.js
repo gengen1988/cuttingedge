@@ -43,6 +43,8 @@ Ext.application({
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 
+        navigator.splashscreen.hide();
+
         // Initialize the main view
         Ext.Viewport.add(Ext.create('Boilerplate.view.Main'));
     },
