@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
   var exec = require('child_process').exec;
   var domain = require('domain');
+  var context = grunt.file.readJSON('meta.json');
   
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -8,14 +9,12 @@ module.exports = function (grunt) {
     copy: {
       main: {
       	expand: true,
-      	cwd: 'build/production/Boilerplate/',
+      	cwd: 'build/production/' + context.appname,
         src: '**',
       	dest: 'cordova/www/'
       }
     }
   });
-
-  var context = grunt.file.readJSON('meta.json');
   
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
@@ -37,7 +36,7 @@ module.exports = function (grunt) {
       cmd: 'sencha',
       args: ['app', 'build'],
       opts: {
-        cwd: 'boilerplate',
+        cwd: 'sencha',
         stdio: 'inherit'
       }
     }, errorHandler.bind(done));
@@ -83,17 +82,6 @@ module.exports = function (grunt) {
     }, errorHandler.bind(done));
   });
 
-  grunt.registerTask('debug', function () {
-    var done = this.async();
-    grunt.log.writeln('running ddms...');
-    grunt.util.spawn({
-      cmd: 'monitor',
-      opts: {
-        stdio: 'inherit'
-      }
-    }, errorHandler.bind(done));
-  });
-
   grunt.registerTask('web', function () {
     var done = this.async();
     grunt.log.writeln('running web server');
@@ -108,7 +96,7 @@ module.exports = function (grunt) {
     'compile'
   ]);
 
-  grunt.registerTask('test', ['build', 'run', 'debug']);
+  grunt.registerTask('test', ['build', 'run']);
 
   grunt.registerTask('parse', function () {
     var builder = require('./lib/builder');

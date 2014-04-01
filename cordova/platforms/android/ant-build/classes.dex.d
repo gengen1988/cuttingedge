@@ -1,4 +1,11 @@
 /home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes.dex : \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes/com/eteng/mobile/Bootplate/R$drawable.class \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes/com/eteng/mobile/Bootplate/Boilerplate.class \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes/com/eteng/mobile/Bootplate/R$attr.class \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes/com/eteng/mobile/Bootplate/BuildConfig.class \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes/com/eteng/mobile/Bootplate/R$string.class \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes/com/eteng/mobile/Bootplate/R$xml.class \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes/com/eteng/mobile/Bootplate/R.class \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes/com/eteng/mobile/Boilerplate/R$drawable.class \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes/com/eteng/mobile/Boilerplate/Boilerplate.class \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/ant-build/classes/com/eteng/mobile/Boilerplate/R$attr.class \

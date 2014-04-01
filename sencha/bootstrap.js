@@ -5,7 +5,7 @@
  * metadata-driven class system features 
  */
 Ext.Loader.addClassPathMappings({
-  "Boilerplate": "app",
+  "AAAA": "app",
   "Ext": "../touch/src",
   "Ext.device.Purchases.Product": "../touch/src/device/purchases/Sencha.js",
   "Ext.device.filesystem.DirectoryEntry": "../touch/src/device/filesystem/HTML5.js",
@@ -20,7 +20,9 @@ Ext.Loader.addClassPathMappings({
   "Ext.draw.engine.SvgContext.Gradient": "../touch/src/draw/engine/SvgContext.js"
 });
 Ext.ClassManager.addNameAlternateMappings({
-  "Boilerplate.view.Main": [],
+  "AAAA.controller.Main": [],
+  "AAAA.profile.Main": [],
+  "AAAA.view.Main": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],
@@ -746,9 +748,9 @@ Ext.ClassManager.addNameAlternateMappings({
   ]
 });
 Ext.ClassManager.addNameAliasMappings({
-  "Boilerplate.view.Main": [
-    "widget.main"
-  ],
+  "AAAA.controller.Main": [],
+  "AAAA.profile.Main": [],
+  "AAAA.view.Main": [],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],

@@ -19,9 +19,5 @@ Ext.application({
 
     profiles: [
         'Main'
-    ],
-
-    launch: function() {
-        console.log('=== hide splashscreen ===');
-    }
+    ]
 });

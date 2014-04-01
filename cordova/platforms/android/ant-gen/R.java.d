@@ -1,4 +1,4 @@
-/home/gg/workspace/cuttingedge/cordova/platforms/android/ant-gen/com/eteng/mobile/Boilerplate/R.java \
+/home/gg/workspace/cuttingedge/cordova/platforms/android/ant-gen/com/eteng/mobile/Bootplate/R.java \
  : /home/gg/workspace/cuttingedge/cordova/platforms/android/res/drawable-ldpi/icon.png \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/res/drawable-xhdpi/icon.png \
 /home/gg/workspace/cuttingedge/cordova/platforms/android/res/values/strings.xml \

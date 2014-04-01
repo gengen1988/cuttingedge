@@ -1,7 +1,7 @@
 {{#class 'Ext.app.Profile'}}
   config:
-    controller: [
-      'Main'
+    controllers: [
+      '{{controller "Main"}}'
     ]
   isActive: -> true
 {{/class}}

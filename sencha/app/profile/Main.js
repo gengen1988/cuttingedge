@@ -1,8 +1,8 @@
 (function() {
-  Ext.define('Bootplate.profile.Main', {
+  Ext.define('AAAA.profile.Main', {
     extend: 'Ext.app.Profile',
     config: {
-      controller: ['Main']
+      controllers: ['AAAA.controller.Main']
     },
     isActive: function() {
       return true;

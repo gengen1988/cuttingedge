@@ -11,13 +11,13 @@
 */
 
 Ext.application({
-    name: 'Bootplate',
+    name: 'AAAA',
 
     requires: [
         'Ext.MessageBox'
     ],
 
-    launch: function() {
-        console.log('=== hide splashscreen ===');
-    }
+    profiles: [
+        'Main'
+    ]
 });

@@ -1,8 +1,17 @@
-Ext.define('Bootplate.view.Main', {
+Ext.define('AAAA.view.Main', {
     extend: 'Ext.Container',
+    alias: 'widget.main',
+    requires: [
+        'Ext.TitleBar'
+    ],
     config: {
         items: [{
-            xtype: 'button'
+            xtype: 'titlebar',
+            title: 'Helloworld'
+        }, {
+            xtype: 'button',
+            text: 'push me',
+            margin: '.5em'
         }]
     }
 });
