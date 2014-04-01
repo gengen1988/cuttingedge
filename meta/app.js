@@ -17,6 +17,10 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
+    profiles: [
+        'Main'
+    ],
+
     launch: function() {
         console.log('=== hide splashscreen ===');
     }

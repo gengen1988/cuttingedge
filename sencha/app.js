@@ -19,9 +19,5 @@ Ext.application({
 
     launch: function() {
         console.log('=== hide splashscreen ===');
-        //navigator.splashscreen.hide();
-
-        // Initialize the main view
-        //Ext.Viewport.add(Ext.create('Boilerplate.view.Main'));
     }
 });
