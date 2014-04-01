@@ -2,7 +2,7 @@
     /**
      * The application's namespace, used by Sencha Command to generate classes
      */
-    "name": "Boilerplate",
+    "name": "{{appname}}",
 
     /**
      * The file path to this application's front HTML document, relative to this app.json file
@@ -38,25 +38,20 @@
      *
      *      }
      */
-    "js": [
-        {
-            "path": "cordova.js",
-            "remote": true
-        },
-        {
-            "path": "../touch/sencha-touch.js",
-            "x-bootstrap": true
-        },
-        {
-            "path": "bootstrap.js",
-            "x-bootstrap": true
-        },
-        {
-            "path": "app.js",
-            "bundle": true,  /* Indicates that all class dependencies are concatenated into this file when build */
-            "update": "delta"
-        }
-    ],
+    "js": [{
+        "path": "cordova.js",
+        "remote": true
+    }, {
+        "path": "../touch/sencha-touch.js",
+        "x-bootstrap": true
+    }, {
+        "path": "bootstrap.js",
+        "x-bootstrap": true
+    }, {
+        "path": "app.js",
+        "bundle": true,  /* Indicates that all class dependencies are concatenated into this file when build */
+        "update": "delta"
+    }],
 
     /**
      * List of all CSS assets in the right inclusion order.
@@ -74,12 +69,10 @@
      *
      *      }
      */
-    "css": [
-        {
-            "path": "resources/css/app.css",
-            "update": "delta"
-        }
-    ],
+    "css": [{
+        "path": "resources/css/app.css",
+        "update": "delta"
+    }],
 
     /**
      * Used to automatically generate cache.manifest (HTML 5 application cache manifest) file when you build

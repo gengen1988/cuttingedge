@@ -4,7 +4,7 @@ module.exports = function (grunt) {
   
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    clean: ['cordova/www/*'],
+    clean: ['cordova/www/*', 'build/*', 'sencha/app/*'],
     copy: {
       main: {
       	expand: true,
@@ -14,6 +14,8 @@ module.exports = function (grunt) {
       }
     }
   });
+
+  var context = grunt.file.readJSON('meta.json');
   
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
@@ -99,6 +101,7 @@ module.exports = function (grunt) {
   
   grunt.registerTask('build', [
     'clean',
+    'template',
     'compress',
     'copy',
     'update',
@@ -107,4 +110,26 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', ['build', 'run', 'debug']);
 
+  grunt.registerTask('parse', function () {
+    var builder = require('./lib/builder');
+    var done = this.async();
+    grunt.log.writeln('parse template to code...');
+    builder.build(context, function (err) {
+      if (err) {
+        done(false);
+        return;
+      }
+      grunt.log.ok();
+      done();
+    });
+  });
+
+  grunt.registerTask('meta', function () {
+    var meta = require('./lib/meta');
+    grunt.log.write('writing meta message...');
+    meta.build(context);
+    grunt.log.ok();
+  });
+
+  grunt.registerTask('template', ['meta', 'parse']);
 }
