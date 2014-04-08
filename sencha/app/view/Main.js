@@ -1,17 +1,24 @@
-Ext.define('AAAA.view.Main', {
+(function() {
+  Ext.define('AAAA.view.Main', {
     extend: 'Ext.Container',
-    alias: 'widget.main',
-    requires: [
-        'Ext.TitleBar'
-    ],
+    xtype: 'main',
     config: {
-        items: [{
-            xtype: 'titlebar',
-            title: 'Helloworld'
-        }, {
-            xtype: 'button',
-            text: 'push me',
-            margin: '.5em'
-        }]
+      items: [
+        {
+          xtype: 'button',
+          text: 'hello',
+          margin: '.5em',
+          listeners: {
+            tap: function() {
+              var e;
+              e = document.createEvent('hello');
+              document.dispatchEvent(e);
+              return console.log('hello tap');
+            }
+          }
+        }
+      ]
     }
-});
+  });
+
+}).call(this);

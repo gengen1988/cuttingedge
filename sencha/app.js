@@ -12,11 +12,6 @@
 
 Ext.application({
     name: 'AAAA',
-
-    requires: [
-        'Ext.MessageBox'
-    ],
-
     profiles: [
         'Main'
     ]
