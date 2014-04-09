@@ -19,6 +19,6 @@
       margin: '.5em'
     }, {
       xtype: 'button',
-      text: 'third'
+      text: '112'
     }]
 {{/class}}

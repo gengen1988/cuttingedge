@@ -1,4 +1,5 @@
 module.exports = function (grunt) {
+  var builder = require('./lib/builder');
   var exec = require('child_process').exec;
   var domain = require('domain');
   var context = grunt.file.readJSON('meta.json');
@@ -17,11 +18,9 @@ module.exports = function (grunt) {
     watch: {
       templates: {
         files: 'src/**',
-        tasks: ['template']
-      },
-      touch: {
-        files: 'sencha/**',
+        tasks: ['convert'],
         options: {
+          spawn: false,
           livereload: {
             port: 35729
           }
@@ -49,12 +48,11 @@ module.exports = function (grunt) {
             // Make directory browse-able.
             middlewares.push(connect.directory(directory));
             middlewares.push(function (req, res, next) {
-              console.log(req.url);
               if (req.url == '/sencha/cordova.js') {
                 res.writeHead(200, {
                   'Content-Type': 'text/javascript'
                 });
-                res.end('console.warn("当前处于网页调试状态，所有设备功能将不可用")');
+                res.end('console.warn("gg: 当前处于网页调试状态，所有设备功能将不可用")');
                 return;
               }
               next();
@@ -80,10 +78,24 @@ module.exports = function (grunt) {
       this();
   };
 
-  grunt.registerTask('default', ['connect', 'watch']);
+  grunt.event.on('watch', function (action, path) {
+    grunt.config('convert.path', path);
+  });
+
+  grunt.registerTask('default', ['template', 'connect', 'watch']);
 
   grunt.registerTask('convert', function () {
-    console.log(arguments);
+    var path = grunt.config('convert.path');
+    console.log(path);
+    var done = this.async();
+    builder.convert(context, path, function (err) {
+      if (err) {
+        done(false);
+        return;
+      }
+      grunt.log.ok();
+      done();
+    });
   });
   
   grunt.registerTask('compress', function () {
@@ -157,7 +169,6 @@ module.exports = function (grunt) {
   grunt.registerTask('test', ['build', 'run']);
 
   grunt.registerTask('parse', function () {
-    var builder = require('./lib/builder');
     var done = this.async();
     grunt.log.writeln('parse template to code...');
     builder.build(context, function (err) {
