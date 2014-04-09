@@ -17,5 +17,8 @@
       xtype: 'button'
       text: 'nihao'
       margin: '.5em'
+    }, {
+      xtype: 'button',
+      text: 'third'
     }]
 {{/class}}

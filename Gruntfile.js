@@ -27,12 +27,49 @@ module.exports = function (grunt) {
           }
         }
       }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 1841,
+          hostname: '*',
+          open: {
+            target: 'http://localhost:1841/sencha'
+          },
+          middleware: function (connect, options) {
+            var middlewares = [];
+            var directory = options.directory || options.base[options.base.length - 1];
+            if (!Array.isArray(options.base)) {
+              options.base = [options.base];
+            }
+            options.base.forEach(function(base) {
+            // Serve static files.
+              middlewares.push(connect.static(base));
+            });
+            // Make directory browse-able.
+            middlewares.push(connect.directory(directory));
+            middlewares.push(function (req, res, next) {
+              console.log(req.url);
+              if (req.url == '/sencha/cordova.js') {
+                res.writeHead(200, {
+                  'Content-Type': 'text/javascript'
+                });
+                res.end('console.warn("当前处于网页调试状态，所有设备功能将不可用")');
+                return;
+              }
+              next();
+            });
+            return middlewares;
+          }
+        }
+      }
     }
   });
   
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   var errorHandler = function (err, result, code) {
       if (err) {
@@ -42,6 +79,8 @@ module.exports = function (grunt) {
       grunt.log.ok();
       this();
   };
+
+  grunt.registerTask('default', ['connect', 'watch']);
 
   grunt.registerTask('convert', function () {
     console.log(arguments);
