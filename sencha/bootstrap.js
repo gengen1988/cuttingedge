@@ -750,7 +750,9 @@ Ext.ClassManager.addNameAlternateMappings({
 Ext.ClassManager.addNameAliasMappings({
   "AAAA.controller.Main": [],
   "AAAA.profile.Main": [],
-  "AAAA.view.Main": [],
+  "AAAA.view.Main": [
+    "widget.main"
+  ],
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
   "Ext.AbstractPlugin": [],

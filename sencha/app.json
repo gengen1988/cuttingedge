@@ -42,6 +42,9 @@
         "path": "cordova.js",
         "remote": true
     }, {
+        "path": "//localhost:35729/livereload.js",
+        "x-bootstrap": true
+    }, {
         "path": "../touch/sencha-touch.js",
         "x-bootstrap": true
     }, {

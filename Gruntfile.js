@@ -13,11 +13,26 @@ module.exports = function (grunt) {
         src: '**',
       	dest: 'cordova/www/'
       }
+    },
+    watch: {
+      templates: {
+        files: 'src/**',
+        tasks: ['template']
+      },
+      touch: {
+        files: 'sencha/**',
+        options: {
+          livereload: {
+            port: 35729
+          }
+        }
+      }
     }
   });
   
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   var errorHandler = function (err, result, code) {
       if (err) {
@@ -27,6 +42,10 @@ module.exports = function (grunt) {
       grunt.log.ok();
       this();
   };
+
+  grunt.registerTask('convert', function () {
+    console.log(arguments);
+  });
   
   grunt.registerTask('compress', function () {
     var done = this.async();

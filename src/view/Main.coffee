@@ -5,7 +5,7 @@
   config:
     items: [{
       xtype: 'button'
-      text: 'hello'
+      text: 'world'
       margin: '.5em'
       listeners:
         tap: ->
@@ -13,5 +13,9 @@
           document.dispatchEvent(e);
 
           console.log('hello tap');
+    }, {
+      xtype: 'button'
+      text: 'nihao'
+      margin: '.5em'
     }]
 {{/class}}

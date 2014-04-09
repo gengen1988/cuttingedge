@@ -14,5 +14,9 @@ Ext.application({
     name: '{{appname}}',
     profiles: [
         'Main'
-    ]
+    ],
+
+    launch: function () {
+        Ext.fly('loading').destroy();
+    }
 });

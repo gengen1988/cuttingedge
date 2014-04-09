@@ -12,10 +12,11 @@
 
     control:
       viewport:
-        push: 'hello'
+        push: 'hello',
+        mmm: 'aaa'
 
     routes:
-      '': 'entry'
+      '': 'entry'      
 
   entry: ->
     Ext.Viewport.setActiveItem
