@@ -1,3 +1,5 @@
 build/
 .sass-cache/
 .directory
+
+node_modules/
